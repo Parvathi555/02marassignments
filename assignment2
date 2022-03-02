@@ -1,0 +1,44 @@
+a=[]
+m=int(input('Enter number of rows'))
+n=int(input('Enter number of columns'))
+for i in range(m):
+    r=[]
+    for j in range(n):
+        r.append(int(input()))
+    a.append(r)
+b=[]
+m=int(input('Enter number of rows'))
+n=int(input('Enter number of columns'))
+for i in range(m):
+    r=[]
+    for j in range(n):
+        r.append(int(input()))
+    b.append(r)
+res=[[0,0],[0,0]]
+for i in range(len(a)):
+    for j in range(len(b[0])):
+        for k in range(len(b)):
+            res[i][j]=res[i][j]+a[i][k]*b[k][j]
+print('resultant matrix')
+for i in range(m):
+    for j in range(n):
+        print(res[i][j],end=' ')
+    print()    
+    
+    
+    output:Enter number of rows2
+           Enter number of columns2
+           2
+           2
+           2
+           2
+           Enter number of rows2
+           Enter number of columns2
+           2
+           2
+           2
+           2
+           resultant matrix
+           8 8
+           8 8
+           
